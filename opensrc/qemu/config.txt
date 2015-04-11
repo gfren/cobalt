@@ -1,0 +1,3 @@
+./configure --cc=/usr/bin/gcc --host-cc=/usr/bin/gcc --prefix= --target-list=arm-softmmu --audio-drv-list=alsa
+
+./configure --audio-drv-list=alsa

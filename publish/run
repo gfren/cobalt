@@ -1,0 +1,9 @@
+# !/bin/sh
+
+cmdline_initrd="console=ttyAMA0 mem=256M root=/dev/ram0 rw"
+
+cmdline_network="-net nic -net tap,ifname=tap0,script=no,downscript=no"
+
+qemu-system-arm -nographic  -cpu arm11mpcore -smp 4 -m 256 -M realview-eb-mpcore -kernel zImage -initrd rootfs.bin -append "$cmdline_initrd" -s 
+
+#$cmdline_network
